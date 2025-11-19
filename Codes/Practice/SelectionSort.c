@@ -1,7 +1,18 @@
 #include <stdio.h>
 
 
-void insertionSort(int A[], int n){
+
+
+void printArray(int A[], int n){
+    printf("\n\n/****************************/\n\n");
+    for(int i=1; i<=n;i++){
+        printf("%d ", A[i]);
+    }
+    printf("\n\n/*****************************/\n\n");
+}
+
+
+void selectionSort(int A[], int n){
     for (int i= 1 ;i<=n-1; i++){
         int minPosition=i;
 
@@ -16,17 +27,6 @@ void insertionSort(int A[], int n){
     }
 }
 
-
-void printArray(int A[], int n){
-    printf("\n\n/****************************/\n\n");
-    for(int i=1; i<=n;i++){
-        printf("%d ", A[i]);
-    }
-    printf("\n\n/*****************************/\n\n");
-}
-
-
-
 int main(){
     int n;
 
@@ -40,7 +40,7 @@ int main(){
     }
     printf("The array is:");
     printArray(A,n);
-    insertionSort(A, n);
+    selectionSort(A, n);
     printf("the sorted Array is:");
     printArray(A,n);
 
