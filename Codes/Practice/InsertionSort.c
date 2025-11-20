@@ -2,17 +2,15 @@
 
 
 void insertionSort(int A[], int n){
-    for (int i= 1 ;i<=n-1; i++){
-        int minPosition=i;
-
-        for(int j=i+1;j<=n; j++ ){
-            if(A[j]<A[minPosition]){
-                minPosition=j;
-            }
+    for (int i= 2 ;i<=n; i++){
+        int key=A[i];
+        int j=i-1;
+        while(j>=1 && A[j]>key){
+            A[j+1]=A[j];
+            j--;
         }
-        int temp= A[i];
-        A[i]=A[minPosition];
-        A[minPosition]=temp;
+        A[j+1]=key;
+        
     }
 }
 
